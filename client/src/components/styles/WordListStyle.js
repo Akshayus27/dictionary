@@ -36,8 +36,8 @@ export const useStyles = makeStyles((theme) => ({
       color: 'white',
       bottom: '2vh',
       top: '87vh',
-      marginLeft: '45vh',
-      marginRight: '50vh'
+      marginLeft: '40vh',
+      marginRight: '60vh'
     },
     modal: {
       position: 'relative',
