@@ -5,8 +5,8 @@ const axios = require('axios')
 exports.wordSave = async function (req, res, next) {
     const authentication = {
         headers: {
-            app_id: 'd03375fb',
-            app_key: '8bd30569ec878227be4fcf9ff1282fad'
+            app_id: 'app_id',
+            app_key: 'app_key'
         }
     }
 
