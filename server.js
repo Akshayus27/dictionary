@@ -12,7 +12,7 @@ app.use(express.urlencoded({ extended: false }))
 
 app.use('/dictionary', route)
 
-const uri = "mongodb+srv://akshayus27:EYoz8dKKld8iC6hR@cluster0.lhyiq.mongodb.net/dictionary?retryWrites=true&w=majority"
+const uri = "mongodb+srv://<username>:<password>@cluster0.lhyiq.mongodb.net/<db_name>?retryWrites=true&w=majority"
 
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true }, (err) => {
     if (!err) console.log('Connected to the database...')
