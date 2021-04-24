@@ -9,6 +9,10 @@ export const useStyles = makeStyles((theme) => ({
       boxShadow: '0px 5px 10px 0px #888888',
       marginLeft: 'auto',
       marginRight: 'auto',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      flexFlow: 'column',
       maxWidth: '30vh',
       minHeight: '2vh',
       marginTop: '25vh',
@@ -18,6 +22,14 @@ export const useStyles = makeStyles((theme) => ({
       border: 'none',
       outline: 'none'
     },
+    text: {
+      padding: '2vh',
+      margin: '3vh',
+      border: 'none',
+      borderBottom: '1px solid black',
+      outline: 'none'
+
+    },
     form: {
       display: 'flex',
       justifyContent: 'center',
@@ -26,21 +38,25 @@ export const useStyles = makeStyles((theme) => ({
     },
     buttonSave: {
       margin: '2vh',
-      backgroundColor: '#69d184',
-      color: 'white',
+      color: '#9c1d14',
+      outline: 'none',
+      border: 'none',
+      backgroundColor: 'white',
+      cursor: 'pointer',
+      fontWeight: 'bold',
       '&:hover': {
-        backgroundColor: '#49b365',
-        borderColor: '#0062cc',
         boxShadow: 'none',
       },
     },
     buttonCancel: {
       margin: '2vh',
-      backgroundColor: '#c25353',
-      color: 'white',
+      color: '#9c1d14',
+      outline: 'none',
+      border: 'none',
+      backgroundColor: 'white',
+      cursor: 'pointer',
+      fontWeight: 'bold',
       '&:hover': {
-        backgroundColor: '#b83b3b',
-        borderColor: '#0062cc',
         boxShadow: 'none',
       },
     }

@@ -1,10 +1,6 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import {addWordToList} from '../store/actions'
-import TextField from '@material-ui/core/TextField'
-import Button from '@material-ui/core/Button'
-import SaveIcon from '@material-ui/icons/Save'
-import DeleteIcon from '@material-ui/icons/Delete'
 import {useStyles} from './styles/AddStyle'
 
 export const Add = ({handleAddClose}) => {
@@ -28,37 +24,32 @@ export const Add = ({handleAddClose}) => {
   }
 
   return (
-    <React.Fragment >
-    <form  className={classes.root} noValidate autoComplete="off">
+    <form  className={classes.root} >
+      Add to Dictionary
       <div className={classes.form}>
-        <TextField
+        <input
+          type='text'
           className={classes.text}
           value={add_word}
           onChange={(e) => handleChange(e)}
-          id="outlined-size-normal"
-          placeholder="Word"
-          variant="outlined"
+          label="word"
+          placeholder="word"
         />
-        <Button
-        variant="contained"
-        size="large"
-        onClick={handleSave}
-        className={classes.buttonSave}
-        startIcon={<SaveIcon />}
-      >
-        Save
-      </Button>
-        <Button
-        variant="contained"
-        size="large"
+        <div className={classes.buttonAlign}>
+        <button
         onClick={handleAddClose}
         className={classes.buttonCancel}
-        startIcon={<DeleteIcon />}
       >
-        Cancel
-      </Button>
+        CANCEL
+      </button>
+        <button
+        onClick={handleSave}
+        className={classes.buttonSave}
+      >
+        ADD
+      </button>
+        </div>
       </div>
     </form>
-    </React.Fragment>
   )
 }

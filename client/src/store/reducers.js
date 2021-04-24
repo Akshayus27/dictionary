@@ -12,7 +12,7 @@ export const dictionaryReducer = (state = initialState, action) => {
     switch(action.type) {
         case "GET_WORDS_LIST":
             return {
-                wordsList: [...action.payload.reverse()]
+                wordsList: action.payload
             }
         case "GET_WORD":
             let word = state.wordsList.filter(word => word._id === action.id)

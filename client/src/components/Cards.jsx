@@ -1,9 +1,6 @@
 import React from 'react'
 import Card from '@material-ui/core/Card'
-import CardActions from '@material-ui/core/CardActions'
 import CardContent from '@material-ui/core/CardContent'
-import Button from '@material-ui/core/Button'
-import Typography from '@material-ui/core/Typography'
 import { useStyles } from './styles/CardsStyle'
 import CloseIcon from '@material-ui/icons/Close'
 
@@ -14,39 +11,30 @@ export const Cards = ({ word, handleCardClose }) => {
     return (
         <React.Fragment>
             <Card className={classes.root}>
-                <CardActions>
-                    <Button
-                        variant="contained"
-                        size="medium"
-                        onClick={handleCardClose}
-                        className={classes.buttonPos}
-                    >
-                        <CloseIcon />
-                    </Button>
-                </CardActions>
+                <CloseIcon onClick={handleCardClose} className={classes.buttonPos}/>
                 <CardContent>
-                    <Typography className={classes.pos} variant="h3" component="h2">
+                    <h1 className={classes.pos}>
                         {word.word}
-                    </Typography>
-                    <Typography className={classes.title} color="textSecondary" gutterBottom>
+                    </h1>
+                    <p className={classes.title}>
                         {word.etymologies}
-                    </Typography>
+                    </p>
                     <br />
                     {/* Each an every word has two entries, one is the verb/adverb and it's definitions and examples and the other
                     is the noun/adjective and it's definitions and exapmles */}
                     {word.entries.map(entry => {
                         return (
                             <React.Fragment>
-                                <Typography color="textSecondary">
+                                <i>
                                     {entry.lexicalId}
-                                </Typography>
-                                <Typography variant="body2" component="p">
+                                </i>
+                                <div variant="body2" component="p">
                                     {entry.senses.map((sense => {
                                         return (
                                             <React.Fragment>
-                                                <Typography variant="h6" component="h4">
+                                                <h4>
                                                     {sense.definitions}
-                                                </Typography>
+                                                </h4>
                                                 <ul>
                                                     {sense.examples.map(example => {
                                                         return (
@@ -57,7 +45,7 @@ export const Cards = ({ word, handleCardClose }) => {
                                             </React.Fragment>
                                         )
                                     }))}
-                                </Typography>
+                                </div>
                                 <br />
                                 <br />
                             </React.Fragment>

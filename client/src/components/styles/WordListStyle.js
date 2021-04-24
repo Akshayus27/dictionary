@@ -1,4 +1,4 @@
-import { makeStyles, rgbToHex } from '@material-ui/core/styles'
+import { makeStyles} from '@material-ui/core/styles'
 
 export const useStyles = makeStyles((theme) => ({
     root: {
@@ -7,13 +7,19 @@ export const useStyles = makeStyles((theme) => ({
       backgroundColor: theme.palette.background.paper,
       display: 'block',
       marginLeft: 'auto',
-      marginTop: '8vh',
+      margin: '1px',
       marginRight: 'auto',
       border: 'none',
-      outline: 'none'
+      outline: 'none',
+      fontWeight: 'light'
     },
     item: {
-      boxShadow: '0px 2px 5px 0px #888888'
+      boxShadow: '1px 1px 1px px #888888',
+      display: 'flex',
+      justifyContents: 'center',
+      alignItems: 'right',
+      flexDirection: 'column',
+      cursor: 'pointer'
     },
     inline: {
       display: 'inline',
@@ -22,19 +28,22 @@ export const useStyles = makeStyles((theme) => ({
       margin: theme.spacing(2),
     },
     icon: {
-      position: 'absolute',
-      bottom: theme.spacing(-4),
-      right: theme.spacing(3),
-      backgroundColor: '#b03f2f',
+      position: 'fixed',
+      backgroundColor: '#bf7c7c',
       '&:hover': {
-        backgroundColor: '#b02828'
+        backgroundColor: '#bf7c7c'
       },
       color: 'white',
+      bottom: '2vh',
+      top: '87vh',
+      marginLeft: '45vh',
+      marginRight: '50vh'
     },
     modal: {
       position: 'relative',
       marginRight: '1vh',
-      cursor: 'pointer',
-      color:"grey"
+      color:"black",
+      fontSize: 24,
+      fontWeight: 'bolder'
     },
   }))

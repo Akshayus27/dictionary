@@ -41,6 +41,7 @@ exports.wordSave = async function (req, res, next) {
             examples: sense.examples ? [...sense.examples.map(ex => { return { text: ex.text } })] : []
         }))]
     }))]
+    word.entries = word.entries.reverse()
     //This will store the word in the db(mongodb)
     await word.save()
 

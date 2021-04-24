@@ -4,5 +4,5 @@ const Word = require('../models/word')
 exports.wordList = async function (req, res) {
     const words = await Word.find({})
 
-    res.send(words)
+    res.send(words.reverse())
 }
