@@ -1,8 +1,5 @@
-body {
-  margin: 0;
-  font-family: 'Kumbh Sans', sans-serif;
-}
 
-code {
+* {
   font-family: 'Kumbh Sans', sans-serif;
+  src: local('Kumbh Sans'), url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300&display=swap');
 }

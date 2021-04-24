@@ -24,7 +24,7 @@ export const useStyles = makeStyles({
       fontSize: 14,
     },
     pos: {
-      marginBottom: '1vh',
+      marginBottom: '2vh',
     },
     buttonPos: {
         position: 'relative',

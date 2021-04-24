@@ -1,4 +1,4 @@
-import { makeStyles } from '@material-ui/core/styles'
+import { makeStyles, rgbToHex } from '@material-ui/core/styles'
 
 export const useStyles = makeStyles((theme) => ({
     root: {
@@ -25,11 +25,11 @@ export const useStyles = makeStyles((theme) => ({
       position: 'absolute',
       bottom: theme.spacing(-4),
       right: theme.spacing(3),
-      backgroundColor: '#b03f3f',
-      color: 'white',
+      backgroundColor: '#b03f2f',
       '&:hover': {
         backgroundColor: '#b02828'
-      }
+      },
+      color: 'white',
     },
     modal: {
       position: 'relative',

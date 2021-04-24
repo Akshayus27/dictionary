@@ -101,7 +101,7 @@ export const WordList = () => {
         })
       }
       <React.Fragment>
-        <Fab onClick={handleAddOpen} className={classes.icon}>
+        <Fab className={classes.icon} onClick={handleAddOpen} >
           <AddIcon />
         </Fab>
         <Modal
