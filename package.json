@@ -1,0 +1,24 @@
+{
+  "name": "dictionary",
+  "version": "1.0.0",
+  "main": "server.js",
+  "author": "akshay",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cd client && yarn run build",
+    "install-client": "cd client && yarn install",
+    "heroku-postbuild": "yarn run install-client && yarn run build",
+    "start": "nodemon server.js",
+    "client": "cd client && yarn start",
+    "dev": "concurrently \"yarn run start\" \"yarn run client\""
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "concurrently": "^6.0.2",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.5",
+    "nodemon": "^2.0.7"
+  }
+}
